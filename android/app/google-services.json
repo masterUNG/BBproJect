@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "318797131044",
+    "project_id": "stylehintreview",
+    "storage_bucket": "stylehintreview.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:318797131044:android:880f3df162797bc2d897b1",
+        "android_client_info": {
+          "package_name": "com.kamonratbb.flutterstylehint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "318797131044-volboibs38dmjpvtk9k26qm8n301s94l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsshppYgdOXOVancdcgfEChnrN8TnOsc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "318797131044-volboibs38dmjpvtk9k26qm8n301s94l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
