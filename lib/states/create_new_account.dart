@@ -87,7 +87,7 @@ class _CreatenewAccountState extends State<CreatenewAccount> {
                             displayName: displayName!,
                             email: email!,
                             password: password!,
-                            uid: uid);
+                            uid: uid, urlAvatar: '');
 
                         await FirebaseFirestore.instance
                             .collection('user')
