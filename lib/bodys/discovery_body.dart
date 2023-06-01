@@ -23,7 +23,7 @@ class _DiscoverBodyState extends State<DiscoverBody> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    // AppService().readPostForDiscover();
+    AppService().readPostForDiscover();
     AppService().readDiscoverModel();
   }
 
@@ -88,7 +88,7 @@ class _DiscoverBodyState extends State<DiscoverBody> {
                         ),
                       ],
                     ),
-                    ShowGridView(),
+                    ShowGridView(demoModels: appController.discoverModels,),
                   ],
                 );
         });

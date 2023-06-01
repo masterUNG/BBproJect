@@ -87,7 +87,7 @@ class ForyouPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    ShowGridView(),
+                    ShowGridView(demoModels: appController.demoModels,),
                   ],
                 );
         });

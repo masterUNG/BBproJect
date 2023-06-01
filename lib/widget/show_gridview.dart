@@ -1,13 +1,20 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:flutterstylehint/widget/widget_image.dart';
+import 'package:get/get.dart';
+
+import 'package:flutterstylehint/model/demo_model.dart';
 import 'package:flutterstylehint/utility/app_controller.dart';
 import 'package:flutterstylehint/widget/widget_image_network.dart';
 import 'package:flutterstylehint/widget/widget_text.dart';
-import 'package:get/get.dart';
 
 class ShowGridView extends StatefulWidget {
   const ShowGridView({
-    super.key,
-  });
+    Key? key,
+    required this.demoModels,
+  }) : super(key: key);
+
+  final List<DemoModel> demoModels;
 
   @override
   State<ShowGridView> createState() => _ShowGridViewState();
@@ -21,7 +28,7 @@ class _ShowGridViewState extends State<ShowGridView> {
     return GridView.builder(
       physics: const ScrollPhysics(),
       shrinkWrap: true,
-      itemCount: appController.demoModels.length,
+      itemCount: widget.demoModels.length,
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2, childAspectRatio: 1 / 2),
       itemBuilder: (context, index) => Padding(
@@ -29,7 +36,7 @@ class _ShowGridViewState extends State<ShowGridView> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            WidgetImageNetwork(urlImage: appController.demoModels[index].url),
+            WidgetImageNetwork(urlImage: widget.demoModels[index].url),
             SizedBox(
               width: 80,
               child: Row(
@@ -40,19 +47,16 @@ class _ShowGridViewState extends State<ShowGridView> {
                     color: Colors.grey,
                   ),
                   WidgetText(
-                      data: appController.demoModels[index].star.toString()),
-                  const Icon(
-                    Icons.chat_bubble_outline,
-                    color: Colors.grey,
-                  ),
+                      data: widget.demoModels[index].star.toString()),
+                  WidgetImage(path: 'images/profile.png',size: 24,),
                 ],
               ),
             ),
             WidgetText(
-              data: appController.demoModels[index].name,
+              data: widget.demoModels[index].name,
               textStyle: Theme.of(context).textTheme.labelLarge,
             ),
-            WidgetText(data: appController.demoModels[index].tags),
+            WidgetText(data: widget.demoModels[index].tags),
           ],
         ),
       ),

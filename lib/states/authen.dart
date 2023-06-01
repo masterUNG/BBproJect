@@ -10,6 +10,8 @@ import 'package:get/get.dart';
 class Authen extends StatefulWidget {
   const Authen({super.key});
 
+  ///aaaa
+
   @override
   State<Authen> createState() => _AuthenState();
 }
@@ -68,10 +70,9 @@ class _AuthenState extends State<Authen> {
                           .signInWithEmailAndPassword(
                               email: email!, password: password!)
                           .then((value) {
-                            Get.back();
-                            AppService().findCurrentUserModel();
-                          })
-                          .catchError((onError) {
+                        Get.back();
+                        AppService().findCurrentUserModel();
+                      }).catchError((onError) {
                         AppDialog(context: context).normalDialog(
                             title: onError.code, subTitle: onError.message);
                       });
